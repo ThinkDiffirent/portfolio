@@ -1,0 +1,81 @@
+!!! Strict
+%html{ "xml:lang" => "cs", :lang => "cs", :xmlns => "http://www.w3.org/1999/xhtml" }
+  %head
+    %meta{ :content => "text/html; charset=utf-8", "http-equiv" => "content-type" }
+    %meta{ :content => "fr", "http-equiv" => "content-language" }
+    %meta{ :name => "author", :lang => "fr", :content => "Nicolas Blanco" }
+    %meta{ :name => "copyright", :lang => "fr", :content => "Nicolas Blanco" }
+    %meta{ :name => "description", :content => "Nicolas Blanco's Portfolio" }
+    %meta{ :name => "keywords", :content => "web,ruby,rails" }
+    %meta{ :name => "robots", :content => "all,follow" }
+    %link{ :href => "/stylesheets/screen.css", :rel => "stylesheet", :type => "text/css", :media => "screen,projection" }
+    %link{ :href => "css/print.css", :rel => "stylesheet", :media => "print", :type => "text/css" }
+    %title
+      Portfolio de Nicolas Blanco, développeur Web
+  %body
+    #layout
+      #header
+        %h1#logo
+          %a{ :href => "./", :title => "Nicolas Blanco" }
+            nicolas
+            %span.light
+              blanco
+            %span.leaf
+              \&nbsp;
+        %hr.noscreen
+        %p.noscreen.noprint
+          %em
+            Skip to
+            %a{ :href => "#obsah" }
+              content
+            ,
+            %a{ :href => "#nav" }
+              navigation
+            \.
+        %hr.noscreen
+        #nav.box
+          %ul
+            %li
+              %a{ :href => "/" }
+                Accueil
+                %br
+                %span
+                  Page principale
+            %li
+              %a{ :href => my_work_path }
+                Réalisations
+                %br
+                %span
+                  et contributions
+            %li
+              %a{ :href => my_cv_path }
+                CV
+                %br
+                %span
+                  Mon CV
+            %li
+              %a{ :href => "http://www.salsaonrails.eu" }
+                Blog
+                %br
+                %span
+                  Quelques écrits...
+          %hr.noscreen
+        #container.box
+          #obsah.content.box
+            .in
+              != yield
+          #panel-left.box.panel
+            .in
+              != render 'shared/left_panel'
+        #footer
+          %span.f-left
+            &laquo;Je recherche beaucoup d'Hommes qui ont une capacité infinie
+            %br
+            de ne pas savoir ce qui ne peut pas être fait.&raquo;
+            %em
+              Henry Ford
+          %span.f-right
+            Site XHTML Strict propulsé par
+            != link_to "Ruby on Rails", "http://www.rubyonrails.org"
+            
+            

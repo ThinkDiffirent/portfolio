@@ -1,0 +1,14 @@
+%p
+  %span Mes derniers tweets...
+
+- if @tweets.present?
+  - @tweets.each do |tweet|
+    %p
+      %span
+        != tweet.created_at.to_datetime
+      %br
+      != auto_link(h(tweet.text))
+- else
+  %p Erreur en récupérant les derniers tweets, connectez-vous sur mon compte !
+    
+%p!= link_to image_tag("twitter.png"), "http://twitter.com/slainer68"
