@@ -1,8 +1,8 @@
 set :application, "portfolio"
 
-set :repository, "." 
-set :scm, :none 
-set :deploy_via, :copy
+set :repository,  "git@github.com:slainer68/#{application}.git"
+set :scm, "git"
+set :repository_cache, "git_cache"
 set :copy_exclude, [".svn", ".DS_Store", ".git"]
 set :user, "slainer68"
 set :runner, "slainer68"
@@ -17,6 +17,7 @@ role :db,  "salsaonrails.eu", :primary => true
 # If you are using Passenger mod_rails uncomment this:
 # if you're still using the script/reapear helper you will need
 # these http://github.com/rails/irs_process_scripts
+after "deploy:update_code", "deploy:do_all_symlinks"
 
 namespace :mod_rails do
   desc <<-DESC
@@ -29,4 +30,9 @@ end
  
 namespace :deploy do
   %w(start restart).each { |name| task name, :roles => :app do mod_rails.restart end }
+    
+  desc "Make all necessary symlinks"
+  task :do_all_symlinks do
+    run "ln -nfs #{shared_path}/config/database.yml #{current_release}/config/database.yml"
+  end
 end
