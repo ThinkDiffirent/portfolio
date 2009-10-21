@@ -6,7 +6,7 @@
     %p
       %span!= tweet.created_at.to_datetime
       %br
-      != auto_link(h(tweet.text))
+      != auto_link(tweet.text)
 - else
   %p Erreur en récupérant les derniers tweets, connectez-vous sur mon compte !
     
