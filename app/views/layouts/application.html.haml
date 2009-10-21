@@ -1,72 +1,56 @@
 !!! Strict
-%html{ "xml:lang" => "cs", :lang => "cs", :xmlns => "http://www.w3.org/1999/xhtml" }
+%html(xml:lang="fr" lang="fr" xmlns="http://www.w3.org/1999/xhtml")
   %head
-    %meta{ :content => "text/html; charset=utf-8", "http-equiv" => "content-type" }
-    %meta{ :content => "fr", "http-equiv" => "content-language" }
-    %meta{ :name => "author", :lang => "fr", :content => "Nicolas Blanco" }
-    %meta{ :name => "copyright", :lang => "fr", :content => "Nicolas Blanco" }
-    %meta{ :name => "description", :content => "Nicolas Blanco's Portfolio" }
-    %meta{ :name => "keywords", :content => "web,ruby,rails" }
-    %meta{ :name => "robots", :content => "all,follow" }
-    %link{ :href => "/stylesheets/screen.css", :rel => "stylesheet", :type => "text/css", :media => "screen,projection" }
-    %link{ :href => "css/print.css", :rel => "stylesheet", :media => "print", :type => "text/css" }
-    %title
-      Portfolio de Nicolas Blanco, développeur Web
+    %meta(content="text/html; charset=utf-8" http-equiv="content-type")
+    %meta(content="fr" http-equiv="content-language")
+    %meta(name="author" lang="fr" content="Nicolas Blanco")
+    %meta(name="copyright" lang="fr" content="Nicolas Blanco")
+    %meta(name="description" content="Nicolas Blanco's Portfolio")
+    %meta(name="keywords" content="web,ruby,rails")
+    %meta(name="robots" content="all,follow")
+    != stylesheet_link_tag "screen", :media => :screen
+    %title Portfolio de Nicolas Blanco, développeur Web
+    
   %body
     #layout
       #header
         %h1#logo
-          %a{ :href => "./", :title => "Nicolas Blanco" }
+          - link_to root_url, :title => "Nicolas Blanco" do
             nicolas
-            %span.light
-              blanco
-            %span.leaf
-              \&nbsp;
-        %hr.noscreen
-        %p.noscreen.noprint
-          %em
-            Skip to
-            %a{ :href => "#obsah" }
-              content
-            ,
-            %a{ :href => "#nav" }
-              navigation
-            \.
+            %span.light blanco
+            %span.leaf &nbsp;
+
         %hr.noscreen
         #nav.box
           %ul
             %li
-              %a{ :href => "/" }
+              - link_to root_url do
                 Accueil
                 %br
-                %span
-                  Page principale
+                %span Page principale
             %li
-              %a{ :href => my_work_path }
+              - link_to my_work_path do
                 Réalisations
                 %br
-                %span
-                  et contributions
+                %span et contributions
             %li
-              %a{ :href => my_cv_path }
+              - link_to my_cv_path do
                 CV
                 %br
-                %span
-                  Mon CV
+                %span Mon CV
             %li
-              %a{ :href => "http://www.salsaonrails.eu" }
+              - link_to "http://www.salsaonrails.eu" do
                 Blog
                 %br
-                %span
-                  Quelques écrits...
+                %span Quelques écrits...
           %hr.noscreen
+          
         #container.box
           #obsah.content.box
-            .in
-              != yield
+            .in!= yield
           #panel-left.box.panel
-            .in
-              != render 'shared/left_panel'
+            .in!= render 'shared/left_panel'
+            
         #footer
           %span.f-left
             &laquo;Je recherche beaucoup d'Hommes qui ont une capacité infinie
@@ -77,5 +61,4 @@
           %span.f-right
             Site XHTML Strict propulsé par
             != link_to "Ruby on Rails", "http://www.rubyonrails.org"
-            
             

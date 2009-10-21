@@ -4,8 +4,7 @@
 - if @tweets.present?
   - @tweets.each do |tweet|
     %p
-      %span
-        != tweet.created_at.to_datetime
+      %span!= tweet.created_at.to_datetime
       %br
       != auto_link(h(tweet.text))
 - else
