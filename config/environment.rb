@@ -26,7 +26,7 @@ Rails::Initializer.run do |config|
 
   # Skip frameworks you're not going to use. To use Rails without a database,
   # you must remove the Active Record framework.
-  # config.frameworks -= [ :active_record, :active_resource, :action_mailer ]
+  config.frameworks -= [ :active_record, :active_resource, :action_mailer ]
 
   # Activate observers that should always be running
   # config.active_record.observers = :cacher, :garbage_collector, :forum_observer
@@ -39,14 +39,10 @@ Rails::Initializer.run do |config|
   # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
   # config.i18n.default_locale = :de
   config.gem "haml", :version => ">= 2.2.2"
-  config.gem "twitter", :version => ">= 0.6.14"
   config.gem "facets", :version => ">= 2.7.0"
-  config.gem "nove-system-settings", :lib => "system_setting", :version => ">= 0.2.0", :source => "http://gemcutter.org"
 end
 
 require "facets/random"
-
-LAST_TWEETS_FILE = File.join(Rails.root, "public", "system", "last_tweets.yml")
 
 # Auto escape all outputs. Warning ! To render a partial or yield something in a view, you must now use != instead of =
 Haml::Template.options[:escape_html] = true
