@@ -1,13 +1,37 @@
 %p
   %span Mes derniers tweets...
 
-- if @tweets.present?
-  - @tweets.each do |tweet|
-    %p
-      %span!= tweet.created_at.to_datetime
-      %br
-      != auto_link(tweet.text)
-- else
-  %p Erreur en récupérant les derniers tweets, connectez-vous sur mon compte !
+:plain
+  <script src="http://widgets.twimg.com/j/2/widget.js"></script>
+  <script>
+  new TWTR.Widget({
+    version: 2,
+    type: 'profile',
+    rpp: 4,
+    interval: 6000,
+    width: 'auto',
+    height: 300,
+    theme: {
+      shell: {
+        background: '#333333',
+        color: '#ffffff'
+      },
+      tweets: {
+        background: '#192d40',
+        color: '#ffffff',
+        links: '#4aed05'
+      }
+    },
+    features: {
+      scrollbar: false,
+      loop: false,
+      live: false,
+      hashtags: true,
+      timestamp: true,
+      avatars: false,
+      behavior: 'all'
+    }
+  }).render().setUser('slainer68').start();
+  </script>
     
 %p!= link_to image_tag("twitter.png"), "http://twitter.com/slainer68"

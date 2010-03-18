@@ -8,11 +8,11 @@ set :user, "slainer68"
 set :runner, "slainer68"
 set :use_sudo, false
 set :rails_env, "production"
-set :deploy_to, "/home/slainer68/portfolio"
+set :deploy_to, "/home/slainer68/projects/#{application}"
 
-role :web, "salsaonrails.eu"                       # Your HTTP server, Apache/etc
-role :app, "salsaonrails.eu"                          # This may be the same as your `Web` server
-role :db,  "salsaonrails.eu", :primary => true
+role :web, "nicolasblanco.fr"                       # Your HTTP server, Apache/etc
+role :app, "nicolasblanco.fr"                          # This may be the same as your `Web` server
+role :db,  "nicolasblanco.fr", :primary => true
 
 # If you are using Passenger mod_rails uncomment this:
 # if you're still using the script/reapear helper you will need
@@ -24,7 +24,7 @@ namespace :mod_rails do
   Restart the application altering tmp/restart.txt for mod_rails.
   DESC
   task :restart, :roles => :app do
-    run "touch  #{current_release}/tmp/restart.txt"
+    run "touch  #{release_path}/tmp/restart.txt"
   end
 end
  
@@ -33,6 +33,6 @@ namespace :deploy do
     
   desc "Make all necessary symlinks"
   task :do_all_symlinks do
-    run "ln -nfs #{shared_path}/config/database.yml #{current_release}/config/database.yml"
+    run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
   end
 end
