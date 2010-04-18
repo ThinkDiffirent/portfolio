@@ -1,0 +1,7 @@
+%h2 Welcome on the porfolio of a Web enthusiast!
+%hr
+
+%p.tags_cloud
+  - @tags.each do |tag|
+    %span{ :style => "font-size: #{%w(1 1.2 1.5 1.8 2).at_rand}em"}= tag
+    &nbsp;&nbsp;&nbsp;

@@ -1,15 +1,15 @@
 !!! Strict
-%html(xml:lang="fr" lang="fr" xmlns="http://www.w3.org/1999/xhtml")
+%html(xml:lang="en" lang="en" xmlns="http://www.w3.org/1999/xhtml")
   %head
     %meta(content="text/html; charset=utf-8" http-equiv="content-type")
-    %meta(content="fr" http-equiv="content-language")
-    %meta(name="author" lang="fr" content="Nicolas Blanco")
-    %meta(name="copyright" lang="fr" content="Nicolas Blanco")
+    %meta(content="en" http-equiv="content-language")
+    %meta(name="author" lang="en" content="Nicolas Blanco")
+    %meta(name="copyright" lang="en" content="Nicolas Blanco")
     %meta(name="description" content="Nicolas Blanco's Portfolio")
     %meta(name="keywords" content="web,ruby,rails")
     %meta(name="robots" content="all,follow")
     != stylesheet_link_tag "screen", :media => :screen
-    %title Portfolio de Nicolas Blanco, développeur Web
+    %title Nicolas Blanco's porfolio, Web developper
     
   %body
     #layout
@@ -24,20 +24,20 @@
         #nav.box
           %ul
             %li
-              - link_to root_url do
-                Accueil
+              - link_to '/en' do
+                Welcome
                 %br
-                %span Page principale
+                %span Main page
             %li
-              - link_to my_work_path do
-                Réalisations
+              - link_to '/en/realisations' do
+                Realisations
                 %br
-                %span et contributions
+                %span and contributions
             %li
-              - link_to my_cv_path do
-                CV
+              - link_to '/en/resume' do
+                Resume
                 %br
-                %span Mon CV
+                %span My resume
             /%li
             /  - link_to "http://www.salsaonrails.eu" do
             /    Blog
@@ -59,9 +59,9 @@
             %em
               Henry Ford
           %span.f-right
-            Site XHTML Strict propulsé par
+            XHTML Strict site powered by
             != link_to "Ruby on Rails", "http://www.rubyonrails.org"
-            et hébergé sur
+            and hosted by
             != link_to "Heroku", "http://www.heroku.com"
     
     :plain
@@ -74,4 +74,3 @@
       var pageTracker = _gat._getTracker("UA-15322489-1");
       pageTracker._trackPageview();
       } catch(err) {}</script>
-      
