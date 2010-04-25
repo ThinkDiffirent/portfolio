@@ -6,9 +6,13 @@ L'utilisation du framework Ruby on Rails incite à respecter le principe Don't R
 
 != "Vous trouverez sur #{link_to "mon compte Github", "http://github.com/slainer68"} un certain nombre de librairies et de plugins open source que j'ai développé."
 
-%h3 Réalisations de projets libres
+%h3 Mes projets libres
 
 %ul
+  %li
+    %strong
+      != link_to "Devise RPX Connectable", "http://github.com/slainer68/devise_rpx_connectable"
+    \: une librairie Rails permettant d'intégrer à Devise (librairie d'authentification) le support des services de RPX (twitter, facebook, OpenID, Google...).
   %li
     %strong
       != link_to "Easy Vimeo", "http://github.com/slainer68/easy-vimeo"
