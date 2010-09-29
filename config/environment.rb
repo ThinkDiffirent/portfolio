@@ -40,10 +40,7 @@ Rails::Initializer.run do |config|
   config.i18n.default_locale = :fr
   
   config.gem "haml", :version => ">= 2.2.2"
-  config.gem "facets", :version => ">= 2.7.0"
 end
-
-require "facets/random"
 
 # Auto escape all outputs. Warning ! To render a partial or yield something in a view, you must now use != instead of =
 Haml::Template.options[:escape_html] = true
