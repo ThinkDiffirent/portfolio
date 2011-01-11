@@ -8,14 +8,14 @@
     %meta(name="description" content="Nicolas Blanco's Portfolio")
     %meta(name="keywords" content="web,ruby,rails")
     %meta(name="robots" content="all,follow")
-    != stylesheet_link_tag "screen", :media => :screen
+    = stylesheet_link_tag "screen", :media => :screen
     %title Portfolio de Nicolas Blanco, développeur Web
     
   %body
     #layout
       #header
         %h1#logo
-          - link_to root_url, :title => "Nicolas Blanco" do
+          = link_to root_url, :title => "Nicolas Blanco" do
             nicolas
             %span.light blanco
             %span.leaf &nbsp;
@@ -24,32 +24,32 @@
         #nav.box
           %ul
             %li
-              - link_to '/' do
+              = link_to '/' do
                 Accueil
                 %br
                 %span Page principale
             %li
-              - link_to '/realisations' do
+              = link_to '/realisations' do
                 Open source
                 %br
                 %span et contributions
             %li
-              - link_to '/projets' do
+              = link_to '/projets' do
                 Projets
                 %br
                 %span professionnels
             %li
-              - link_to '/curriculum-vitae' do
+              = link_to '/curriculum-vitae' do
                 CV
                 %br
                 %span Mon CV
             %li
-              - link_to 'http://blog.nicolasblanco.fr' do
+              = link_to 'http://blog.nicolasblanco.fr' do
                 Blog
                 %br
                 %span Mon blog
             %li
-              - link_to '/en' do
+              = link_to '/en' do
                 English
                 %br
                 %span Welcome!
@@ -58,9 +58,9 @@
           
         #container.box
           #obsah.content.box
-            .in!= yield
+            .in= yield
           #panel-left.box.panel
-            .in!= render 'shared/left_panel'
+            .in= render 'shared/left_panel'
             
         #footer
           %span.f-left
@@ -71,9 +71,9 @@
               Henry Ford
           %span.f-right
             Site XHTML Strict propulsé par
-            != link_to "Ruby on Rails", "http://www.rubyonrails.org"
+            = link_to "Ruby on Rails", "http://www.rubyonrails.org"
             et hébergé sur
-            != link_to "Heroku", "http://www.heroku.com"
+            = link_to "Heroku", "http://www.heroku.com"
     
     :plain
       <script type="text/javascript">

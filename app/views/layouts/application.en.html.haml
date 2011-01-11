@@ -15,7 +15,7 @@
     #layout
       #header
         %h1#logo
-          - link_to root_url, :title => "Nicolas Blanco" do
+          = link_to root_url, :title => "Nicolas Blanco" do
             nicolas
             %span.light blanco
             %span.leaf &nbsp;
@@ -24,32 +24,32 @@
         #nav.box
           %ul
             %li
-              - link_to '/en' do
+              = link_to '/en' do
                 Welcome
                 %br
                 %span Main page
             %li
-              - link_to '/en/realisations' do
+              = link_to '/en/realisations' do
                 Open source
                 %br
                 %span and contributions
             %li
-              - link_to '/en/projects' do
+              = link_to '/en/projects' do
                 Projects
                 %br
                 %span Professional projects
             %li
-              - link_to '/en/resume' do
+              = link_to '/en/resume' do
                 Resume
                 %br
                 %span My resume
             %li
-              - link_to 'http://blog.nicolasblanco.fr' do
+              = link_to 'http://blog.nicolasblanco.fr' do
                 Blog
                 %br
                 %span My blog
             %li
-              - link_to '/' do
+              = link_to '/' do
                 Français
                 %br
                 %span Bienvenue !
@@ -58,9 +58,9 @@
           
         #container.box
           #obsah.content.box
-            .in!= yield
+            .in= yield
           #panel-left.box.panel
-            .in!= render 'shared/left_panel'
+            .in= render 'shared/left_panel'
             
         #footer
           %span.f-left
@@ -71,9 +71,9 @@
               Henry Ford
           %span.f-right
             XHTML Strict site powered by
-            != link_to "Ruby on Rails", "http://www.rubyonrails.org"
+            = link_to "Ruby on Rails", "http://www.rubyonrails.org"
             and hosted by
-            != link_to "Heroku", "http://www.heroku.com"
+            = link_to "Heroku", "http://www.heroku.com"
     
     :plain
       <script type="text/javascript">
