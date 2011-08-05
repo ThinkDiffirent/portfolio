@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.7'
+gem 'rails', '3.0.9'
 
 gem 'haml'
 
@@ -30,4 +30,8 @@ gem 'haml'
 # group :development, :test do
 #   gem 'webrat'
 # end
+
+group :development, :test do
+  gem "ruby-debug"
+end
 
