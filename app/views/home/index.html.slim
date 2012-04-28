@@ -1,0 +1,249 @@
+div class="hero-unit"
+  h1
+    = image_tag "portrait_image.jpg", size: "70x70", style: "padding: 0.4em;"
+    | &nbsp;Nicolas Blanco
+  p Bienvenue chez un développeur Web freelance passionné ! Vous avez un projet ? Parlons-en !
+  p
+    em
+      | Ruby, Ruby on Rails, HTML 5 & JavaScript, architecture cloud et bien plus, le tout en méthodologie agile !
+    br
+    | &nbsp;
+
+  = mail_to raw("<i class='icon-envelope'></i> nicolas@nicolasblanco.fr"), nil, class: "btn btn-warning btn-large"
+  | &nbsp;&nbsp;&nbsp;
+  = link_to raw("<i class='icon-star'></i> twitter"), "http://twitter.com/slainer68", class: "btn btn-primary btn-large"
+  | &nbsp;&nbsp;&nbsp;
+  = link_to raw("<i class='icon-random'></i> github"), "http://github.com/slainer68", class: "btn btn-info btn-large"
+
+div class="page-header" id="open-source"
+  h2 Projets Open Source
+
+p
+  | Un bon développeur utilisant des technologies libres a nécessairement contribué à des projets libres.
+  | &nbsp;Pour ma part, j'ai contribué et je continue de contribuer à de nombreux projets Open Source et Ruby, parmis lesquels&nbsp;
+  span class="label label-important" Ruby on Rails
+  |,&nbsp;
+  span class="label label-warning" Omniauth
+  |,&nbsp;
+  span class="label label-info" Authlogic
+  |&nbsp;et bien d&#8217;autres librairies... j&#8217;avoue j&#8217;ai arrêté de compter :)...
+
+p
+  | Mon compte&nbsp;
+  = link_to "Github", "http://github.com/slainer68"
+  | &nbsp;contient mes principales librairies et contributions...
+
+div class="page-header" id="talks"
+  h2 Derniers talks
+
+ul class="thumbnails"
+
+  li class="span4"
+    div class="thumbnail"
+      erb:
+        <div style="width:325px" id="__ss_11452252"> <strong style="display:block;margin:12px 0 4px"><a href="http://www.slideshare.net/nicolasblanco1/some-oauth-love" title="Some OAuth love" target="_blank">Some OAuth love</a></strong> <iframe src="http://www.slideshare.net/slideshow/embed_code/11452252" width="325" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe> </div>
+      div class="caption"
+        p
+          em Février 2012
+
+  li class="span4"
+    div class="thumbnail"
+      erb:
+        <div style="width:325px" id="__ss_7484882"> <strong style="display:block;margin:12px 0 4px"><a href="http://www.slideshare.net/nicolasblanco1/a-piece-of-sugar-in-your-clientside-development" title="A piece of sugar in your client-side development">Sugar in your client-side development</a></strong> <iframe src="http://www.slideshare.net/slideshow/embed_code/7484882" width="325" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe> </div>
+      div class="caption"
+        p
+          em Avril 2011
+
+  li class="span4"
+    div class="thumbnail"
+      erb:
+        <div style="width:325px" id="__ss_7572714"> <strong style="display:block;margin:12px 0 4px"><a href="http://www.slideshare.net/nicolasblanco1/background-processing-with-resque" title="Background processing with Resque">Background processing with Resque</a></strong> <iframe src="http://www.slideshare.net/slideshow/embed_code/7572714" width="325" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe> </div>
+      div class="caption"
+        p
+          em Avril 2011
+
+div class="page-header" id="projects"
+  h2 Projets professionnels
+
+table class="table table-bordered table-striped"
+  thead
+    tr
+      th
+        | Nom
+      th
+        | Date
+      th
+        | Description
+      th
+        | Site
+      th
+        | Technologies
+  tbody
+
+    tr
+      td
+        | Consulting Café
+      td
+        | 2012
+      td
+        | Site de partage et d'informations destiné aux consultants.
+        br
+        em Lead Developer
+      td
+        = link_to "consultingcafe.com", "http://www.consultingcafe.com"
+      td
+        span class="label"
+          | Ruby on Rails 3
+        br
+        span class="label"
+          | MongoDB
+
+    tr
+      td
+        | Skillstar
+      td
+        | 2011-2012
+      td
+        | Jeux vidéo en ligne d'adresse et de connaissance. Possibilité de parier de l'argent en affrontant les autres joueurs. Le jeu est télévisé certains matins sur la chaîne nationale française M6.
+        br
+        em Developer
+      td
+        = link_to "skillstar.com", "http://www.skillstar.com"
+      td
+        span class="label"
+          | Ruby on Rails 2
+        br
+        span class="label"
+          | jQuery
+        br
+        span class="label"
+          | Redis
+        br
+        span class="label"
+          | node.js
+
+    tr
+      td
+        | Campingavenue
+      td
+        | 2011
+      td
+        | Plateforme de réservation de campings, bungalows et chalets en Europe.
+        br
+        em Lead developer
+      td
+        = link_to "campingavenue.com", "http://www.campingavenue.com"
+      td
+        span class="label"
+          | Ruby on Rails 3
+        br
+
+    tr
+      td
+        | Bookandgolf
+      td
+        | 2010-2011
+      td
+        | Plateforme de gestion de planning et de vente à destination des clubs de golf.
+        br
+        em Lead developer
+      td
+        = link_to "bookandgolf.com", "http://www.bookandgolf.com"
+      td
+        span class="label"
+          | Ruby on Rails 3
+        br
+        span class="label"
+          | Redis & Resque
+        br
+        span class="label"
+          | backbone.js
+        br
+        span class="label"
+          | Sphinx
+
+    tr
+      td
+        | Lollidays
+      td
+        | 2010
+      td
+        | Réseau social dans le domaine des activités de loisirs et de divertissement.
+        br
+        em Developer
+      td
+        = link_to "lollidays.com", "http://www.lollidays.com"
+      td
+        span class="label"
+          | Ruby on Rails 2
+        br
+        span class="label"
+          | Event Machine
+        br
+        span class="label"
+          | Sphinx
+
+    tr
+      td
+        | The Sphere
+      td
+        | 2009-2010
+      td
+        | Réseau social "d'extrême luxe".
+        br
+        em Developer
+      td
+        = link_to "the-sphere.com", "http://www.the-sphere.com"
+      td
+        span class="label"
+          | Ruby on Rails 2
+        br
+        span class="label"
+          | Sphinx
+
+    tr
+      td
+        | Keldelice
+      td
+        | 2008-2009
+      td
+        | Site internet sur la gastronomie française.
+        br
+        em Developer
+      td
+        = link_to "keldelice.com", "http://www.keldelice.com"
+      td
+        span class="label"
+          | Ruby on Rails 2
+        br
+        span class="label"
+          | Sphinx
+
+
+div class="page-header" id="certifications"
+  h2 Formations et certifications
+
+table class="table table-bordered table-striped"
+  thead
+    tr
+      th
+        | Nom
+      th
+        | Date
+      th
+        | Site
+  tbody
+    tr
+      td
+        | Certification "Ruby Association Certified Ruby Programmer Silver"
+      td
+        | 2010
+      td
+        = link_to "ruby-assn.org", "http://www.ruby-assn.org/certification/programmer"
+    tr
+      td
+        | Formation 'Formateurs : construire vos actions de formation' chez Latitude (conseil en communication et organisme de formation)
+      td
+        | 2009
+      td
+        = link_to "latitude.fr", "http://www.latitude.fr"
