@@ -12,11 +12,13 @@ div class="hero-unit"
     br
     | &nbsp;
 
-  = mail_to "nicolas@nicolasblanco.fr", raw("<i class='icon-envelope'></i> nicolas@nicolasblanco.fr"), class: "btn btn-warning btn-large"
-  | &nbsp;&nbsp;&nbsp;
-  = link_to raw("<i class='icon-star'></i> <strong>twitter</strong>.com/slainer68"), "http://twitter.com/slainer68", class: "btn btn-primary btn-large"
-  | &nbsp;&nbsp;&nbsp;
-  = link_to raw("<i class='icon-random'></i> <strong>github</strong>.com/slainer68"), "http://github.com/slainer68", class: "btn btn-info btn-large"
+  div class="row"
+    div class="span3"
+      = mail_to "nicolas@nicolasblanco.fr", raw("<i class='icon-envelope'></i> nicolas@nicolasblanco.fr"), class: "btn btn-warning btn-large"
+    div class="span3"
+      = link_to raw("<i class='icon-star'></i> <strong>twitter</strong>.com/slainer68"), "http://twitter.com/slainer68", class: "btn btn-primary btn-large"
+    div class="span3"
+      = link_to raw("<i class='icon-random'></i> <strong>github</strong>.com/slainer68"), "http://github.com/slainer68", class: "btn btn-info btn-large"
 
 div class="page-header" id="open-source"
   h2 Projets Open Source
